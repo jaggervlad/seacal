@@ -2,23 +2,30 @@ import { ChevronRightIcon } from '@chakra-ui/icons';
 import {
   Box,
   Button,
-  Container,
   Heading,
   Image,
-  SimpleGrid,
+  Icon,
+  Link,
+  List,
+  ListIcon,
+  ListItem,
 } from '@chakra-ui/react';
 import { BioSection, BioYear } from 'components/bio';
-import { GridItem } from 'components/gridItem';
+import Layout from 'components/layouts/article';
 import Paragraph from 'components/paragraph';
 import Section from 'components/section';
 import NextLink from 'next/link';
-import dgCrmThumb from 'public/images/dg-shoot-2.png';
-import dgCommerceThumb from 'public/images/dg-shopping.png';
+import {
+  IoCheckmarkCircleOutline,
+  IoLogoGithub,
+  IoLogoInstagram,
+  IoLogoTwitter,
+} from 'react-icons/io5';
 
 import type { NextPage } from 'next';
 const Home: NextPage = () => {
   return (
-    <Container maxW="container.md" p={0}>
+    <Layout title="About">
       <Box flexDirection={{ base: 'column-reverse', md: 'row' }} display="flex">
         <Box mr={{ base: 0, md: 14 }}>
           <Heading as="h2" variant="page-title">
@@ -55,11 +62,49 @@ const Home: NextPage = () => {
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/works">
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="blue">
               Portfolio
             </Button>
           </NextLink>
         </Box>
+      </Section>
+
+      <Section delay="0.1">
+        <Heading as="h3" variant="section-title">
+          Technologies
+        </Heading>
+        <Paragraph>
+          <List spacing={2}>
+            <ListItem>
+              <ListIcon as={IoCheckmarkCircleOutline} color="green.500" />
+              NodeJS
+            </ListItem>
+            <ListItem>
+              <ListIcon as={IoCheckmarkCircleOutline} color="green.500" />
+              ReacJS
+            </ListItem>
+            <ListItem>
+              <ListIcon as={IoCheckmarkCircleOutline} color="green.500" />
+              NextJS
+            </ListItem>
+            <ListItem>
+              <ListIcon as={IoCheckmarkCircleOutline} color="green.500" />
+              CSS 3
+            </ListItem>
+            <ListItem>
+              <ListIcon as={IoCheckmarkCircleOutline} color="green.500" />
+              HTML 5
+            </ListItem>
+            <ListItem>
+              <ListIcon as={IoCheckmarkCircleOutline} color="green.500" />
+              MongoDB
+            </ListItem>
+            <ListItem>
+              <ListIcon as={IoCheckmarkCircleOutline} color="green.500" />
+              PostgreSQL
+            </ListItem>
+          </List>
+        </Paragraph>
       </Section>
 
       <Section delay="0.2">
@@ -82,31 +127,34 @@ const Home: NextPage = () => {
 
       <Section delay={'0.3'}>
         <Heading as="h3" variant="section-title">
-          I ♥
+          On the web
         </Heading>
-        <Paragraph>Coding, Calisthenics, Music, Reading</Paragraph>
+        <List>
+          <ListItem>
+            <Link href="https://github.com/jaggerjack" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<Icon as={IoLogoGithub} />}
+              >
+                @jaggervlad
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://instagram.com/gorilla_sw" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<Icon as={IoLogoInstagram} />}
+              >
+                @gorilla_sw
+              </Button>
+            </Link>
+          </ListItem>
+        </List>
       </Section>
-
-      <Heading as="h3" variant="section-title">
-        Projects
-      </Heading>
-      <SimpleGrid columns={[1, 2, 2]} gap={6} mb={8}>
-        <GridItem
-          title="Dulce Glamour Comercial"
-          href="http://dulceglamour.net"
-          src={dgCrmThumb}
-        >
-          Sistem Comercial, CRM
-        </GridItem>
-        <GridItem
-          title="Dulce Glamour Shopping"
-          href="https://dg-shopping.vercel.app"
-          src={dgCommerceThumb}
-        >
-          Commerce, Shoppin, Catalog
-        </GridItem>
-      </SimpleGrid>
-    </Container>
+    </Layout>
   );
 };
 

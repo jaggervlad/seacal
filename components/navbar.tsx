@@ -11,6 +11,8 @@ import {
   MenuItem,
   MenuList,
   useColorModeValue,
+  Stack,
+  Tooltip,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
@@ -18,6 +20,7 @@ import Logo from './logo';
 import ThemeToggleButton from './themeToggleButton';
 
 import type { LinkProps } from '@chakra-ui/react';
+import { IoLogoGithub } from 'react-icons/io5';
 interface LinkItemProps extends LinkProps {
   href: string;
   path: string;
@@ -42,6 +45,28 @@ const LinkItem: React.FC<LinkItemProps> = ({
       >
         {children}
       </Link>
+    </NextLink>
+  );
+};
+
+const LinkMenuItem: React.FC<LinkItemProps> = ({
+  href,
+  path,
+  children,
+  ...props
+}) => {
+  const active = path === href;
+  const inactiveColor = useColorModeValue('gray.900', 'whiteAlpha.900');
+
+  return (
+    <NextLink href={href} passHref>
+      <MenuItem
+        bg={active ? 'grassTeal' : undefined}
+        color={active ? '#202023' : inactiveColor}
+        as={Link}
+      >
+        {children}
+      </MenuItem>
     </NextLink>
   );
 };
@@ -73,50 +98,70 @@ const Navbar: React.FC<{ path: string }> = ({ path, ...props }) => {
         </Flex>
 
         {/* Desktop  */}
-        <Box flex={1} align="right">
-          <Box mr={2} display={{ base: 'none', md: 'inline-block' }}>
-            <LinkItem href="/works" path={path}>
-              Works
-            </LinkItem>
-            <LinkItem href="/posts" path={path}>
-              Posts
-            </LinkItem>
-            <LinkItem
-              href="https://github.com/jaggervlad"
-              path={path}
-              isExternal
+        <Stack
+          direction={{ base: 'column', md: 'row' }}
+          display={{ base: 'none', md: 'flex' }}
+          width={{ base: 'full', md: 'auto' }}
+          alignItems="center"
+          flexGrow={1}
+          mt={{ base: 4, md: 0 }}
+        >
+          <LinkItem href="/works" path={path}>
+            Trabajos
+          </LinkItem>
+          <LinkItem href="/posts" path={path}>
+            Blog
+          </LinkItem>
+          <LinkItem
+            isExternal
+            href="https://github.com/jaggervlad/seacal"
+            path={path}
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+            pl={2}
+          >
+            <Tooltip
+              label="Código fuente."
+              placement="bottom"
+              shouldWrapChildren
             >
-              Github
-            </LinkItem>
-          </Box>
+              <IoLogoGithub />
+            </Tooltip>
+          </LinkItem>
+        </Stack>
+
+        <Box flex={1} align="right">
+          <ThemeToggleButton />
 
           {/* Mobile  */}
-          <Box mr={2} display={{ base: 'inline-block', md: 'none' }}>
+          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu id="navbar-menu" isLazy>
               <MenuButton
                 as={IconButton}
                 icon={<HamburgerIcon />}
                 variant="outline"
               />
-
               <MenuList>
-                <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
-                </NextLink>
-                <NextLink href="/works" passHref>
-                  <MenuItem as={Link}>Works</MenuItem>
-                </NextLink>
-                <NextLink href="/posts" passHref>
-                  <MenuItem as={Link}>Posts</MenuItem>
-                </NextLink>
-                <MenuItem as={Link} href="https://github.com/jaggervlad">
-                  Github
+                <LinkMenuItem href="/" path={path}>
+                  Inicio
+                </LinkMenuItem>
+                <LinkMenuItem href="/works" path={path}>
+                  Trabajos
+                </LinkMenuItem>
+                <LinkMenuItem href="/posts" path={path}>
+                  Blog
+                </LinkMenuItem>
+                <MenuItem
+                  as={Link}
+                  isExternal
+                  href="https://github.com/jaggervlad/seacal"
+                >
+                  Ver Fuente
                 </MenuItem>
               </MenuList>
             </Menu>
           </Box>
-
-          <ThemeToggleButton />
         </Box>
       </Container>
     </Box>
