@@ -1,4 +1,3 @@
-import { GridItemStyle } from 'components/gridItem';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 
@@ -21,7 +20,6 @@ const Layout: React.FC<{ title: string }> = ({ children, title }) => (
       <title>{title} | Seacal DEV</title>
     </Head>
     {children}
-    <GridItemStyle />
   </motion.article>
 );
 

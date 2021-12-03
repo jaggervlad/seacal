@@ -49,12 +49,7 @@ const LinkItem: React.FC<LinkItemProps> = ({
   );
 };
 
-const LinkMenuItem: React.FC<LinkItemProps> = ({
-  href,
-  path,
-  children,
-  ...props
-}) => {
+const LinkMenuItem: React.FC<LinkItemProps> = ({ href, path, children }) => {
   const active = path === href;
   const inactiveColor = useColorModeValue('gray.900', 'whiteAlpha.900');
 
@@ -109,7 +104,7 @@ const Navbar: React.FC<{ path: string }> = ({ path, ...props }) => {
           <LinkItem href="/works" path={path}>
             Trabajos
           </LinkItem>
-          <LinkItem href="/posts" path={path}>
+          <LinkItem href="/blog" path={path}>
             Blog
           </LinkItem>
           <LinkItem
@@ -149,7 +144,7 @@ const Navbar: React.FC<{ path: string }> = ({ path, ...props }) => {
                 <LinkMenuItem href="/works" path={path}>
                   Trabajos
                 </LinkMenuItem>
-                <LinkMenuItem href="/posts" path={path}>
+                <LinkMenuItem href="/blog" path={path}>
                   Blog
                 </LinkMenuItem>
                 <MenuItem

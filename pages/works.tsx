@@ -10,9 +10,9 @@ const WorksPage: NextPage = () => {
   return (
     <Layout title="Projects">
       <Heading as="h3" variant="section-title">
-        Projects
+        Trabajos Recientes
       </Heading>
-      <SimpleGrid columns={[1, 1, 2]} gap={6} mb={8}>
+      <SimpleGrid columns={[1, 1, 2]} gap={6} mb={8} mt={6}>
         <Section delay={'0.1'}>
           <ExternalGridItem
             title="Dulce Glamour Comercial"

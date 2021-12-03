@@ -1,4 +1,5 @@
 import { Box, Text } from '@chakra-ui/react';
+
 const Footer = () => {
   return (
     <Box
@@ -9,9 +10,10 @@ const Footer = () => {
       display={{ base: 'flex' }}
       flexDirection={{ base: 'column', md: 'row' }}
     >
-      <Text isTruncated>Made with ❤️ by @seacal.</Text>
+      <Text isTruncated>Hecho con ❤️ por @seacal_dev</Text>
       <Text>
-        &copy; {new Date().getFullYear()} Sebastian Acosta. All Rights Reserved.
+        &copy; {new Date().getFullYear()} Sebastian Acosta. Todos los derechos
+        reservados.
       </Text>
     </Box>
   );
