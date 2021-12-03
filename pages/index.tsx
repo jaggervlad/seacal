@@ -1,27 +1,10 @@
-import {
-  Box,
-  Heading,
-  Image,
-  List,
-  ListIcon,
-  ListItem,
-  useColorModeValue,
-} from '@chakra-ui/react';
+import { Box, Heading, Image, useColorModeValue } from '@chakra-ui/react';
 import { BioSection, BioYear } from 'components/bio';
 import Layout from 'components/layouts/article';
 import Paragraph from 'components/paragraph';
 import Section from 'components/section';
 import SocialLinks from 'components/socialLinks';
-import { DiMongodb } from 'react-icons/di';
-import { GrMysql } from 'react-icons/gr';
-import { IoLogoJavascript, IoLogoNodejs, IoLogoReact } from 'react-icons/io5';
-import {
-  SiChakraui,
-  SiMaterialui,
-  SiPostgresql,
-  SiTailwindcss,
-  SiTypescript,
-} from 'react-icons/si';
+import TechLinks from 'components/techLinks';
 
 import type { NextPage } from 'next';
 const Home: NextPage = () => {
@@ -67,68 +50,7 @@ const Home: NextPage = () => {
         </Paragraph>
       </Section>
 
-      <Box display="flex">
-        <Box mr={20}>
-          <Section delay="0.1">
-            <Heading as="h3" variant="section-title">
-              Tecnolog&iacute;as Frontend
-            </Heading>
-            <Paragraph>
-              <List spacing={2}>
-                <ListItem>
-                  <ListIcon as={IoLogoReact} color="green.500" />
-                  ReactJS
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={IoLogoJavascript} color="green.500" />
-                  JavaScript
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={SiChakraui} color="green.500" />
-                  Chakra UI
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={SiMaterialui} color="green.500" />
-                  Material UI
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={SiTailwindcss} color="green.500" />
-                  TailwindCSS
-                </ListItem>
-              </List>
-            </Paragraph>
-          </Section>
-        </Box>
-        <Section delay="0.1">
-          <Heading as="h3" variant="section-title">
-            Tecnolog&iacute;as Backend
-          </Heading>
-          <Paragraph>
-            <List spacing={2}>
-              <ListItem>
-                <ListIcon as={IoLogoNodejs} color="green.500" />
-                NodeJS
-              </ListItem>
-              <ListItem>
-                <ListIcon as={SiTypescript} color="green.500" />
-                Typescript
-              </ListItem>
-              <ListItem>
-                <ListIcon as={DiMongodb} color="green.500" />
-                MongoDB
-              </ListItem>
-              <ListItem>
-                <ListIcon as={GrMysql} color="green.500" />
-                MySQL
-              </ListItem>
-              <ListItem>
-                <ListIcon as={SiPostgresql} color="green.500" />
-                PostgreSQL
-              </ListItem>
-            </List>
-          </Paragraph>
-        </Section>
-      </Box>
+      <TechLinks />
 
       <Section delay="0.2">
         <Heading as="h3" variant="section-title">
