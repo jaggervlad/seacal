@@ -22,7 +22,8 @@ const Home: NextPage = () => {
 
           <Box as="p" color={useColorModeValue('gray.700', 'whiteAlpha.500')}>
             <p>Desarrollador Web Fullstack.</p>
-            Ayudo a personas a crear increibles aplicaciones web.
+            Aporto mis conocimientos y capacidades para crear soluciones a
+            través de Aplicaciones Web.
           </Box>
         </Box>
 
@@ -45,8 +46,10 @@ const Home: NextPage = () => {
           Trabajo Actual
         </Heading>
         <Paragraph>
-          Sebastian is a freelance and a full-stack developer based in Peru with
-          a passion for building digital services/stuff he wants.
+          En la actualidad me desempeño de forma independiente (freelance),
+          radico en Perú y ofrezco mis servicios como desarrollador full-stack;
+          me apasiona crear herramientas digitales que aporten soluciones
+          integrales a cualquier tipo de gestión.
         </Paragraph>
       </Section>
 
