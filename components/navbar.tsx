@@ -104,9 +104,9 @@ const Navbar: React.FC<{ path: string }> = ({ path, ...props }) => {
           <LinkItem href="/works" path={path}>
             Trabajos
           </LinkItem>
-          <LinkItem href="/blog" path={path}>
+          {/* <LinkItem href="/blog" path={path}>
             Blog
-          </LinkItem>
+          </LinkItem> */}
           <LinkItem
             isExternal
             href="https://github.com/jaggervlad/seacal"
@@ -144,9 +144,9 @@ const Navbar: React.FC<{ path: string }> = ({ path, ...props }) => {
                 <LinkMenuItem href="/works" path={path}>
                   Trabajos
                 </LinkMenuItem>
-                <LinkMenuItem href="/blog" path={path}>
+                {/* <LinkMenuItem href="/blog" path={path}>
                   Blog
-                </LinkMenuItem>
+                </LinkMenuItem> */}
                 <MenuItem
                   as={Link}
                   isExternal
