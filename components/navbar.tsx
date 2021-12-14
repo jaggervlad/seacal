@@ -26,6 +26,8 @@ interface LinkItemProps extends LinkProps {
   path: string;
 }
 
+//
+
 const LinkItem: React.FC<LinkItemProps> = ({
   href,
   path,
@@ -67,6 +69,7 @@ const LinkMenuItem: React.FC<LinkItemProps> = ({ href, path, children }) => {
 };
 
 const Navbar: React.FC<{ path: string }> = ({ path, ...props }) => {
+  const inactiveColor = useColorModeValue('gray.900', 'whiteAlpha.900');
   return (
     <Box
       position="fixed"
@@ -104,6 +107,14 @@ const Navbar: React.FC<{ path: string }> = ({ path, ...props }) => {
           <LinkItem href="/works" path={path}>
             Trabajos
           </LinkItem>
+          <Link
+            isExternal
+            href="https://docs.google.com/document/d/1A3Ke6jFtFUJs1OQwrgHfVjntyPXF5rgEeJ3YIzu1mxk/edit?usp=sharing"
+            p={2}
+            color={inactiveColor}
+          >
+            Curriculum
+          </Link>
           {/* <LinkItem href="/blog" path={path}>
             Blog
           </LinkItem> */}
@@ -144,9 +155,17 @@ const Navbar: React.FC<{ path: string }> = ({ path, ...props }) => {
                 <LinkMenuItem href="/works" path={path}>
                   Trabajos
                 </LinkMenuItem>
+
                 {/* <LinkMenuItem href="/blog" path={path}>
                   Blog
                 </LinkMenuItem> */}
+                <MenuItem
+                  as={Link}
+                  isExternal
+                  href="https://docs.google.com/document/d/1A3Ke6jFtFUJs1OQwrgHfVjntyPXF5rgEeJ3YIzu1mxk/edit?usp=sharing"
+                >
+                  Curriculum
+                </MenuItem>
                 <MenuItem
                   as={Link}
                   isExternal

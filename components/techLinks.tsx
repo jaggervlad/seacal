@@ -1,19 +1,32 @@
 import { Box, Heading, List, ListIcon, ListItem } from '@chakra-ui/react';
 import { DiMongodb } from 'react-icons/di';
+import { GiKoala } from 'react-icons/gi';
 import { GrMysql } from 'react-icons/gr';
 import { IoLogoJavascript, IoLogoNodejs, IoLogoReact } from 'react-icons/io5';
-import { SiChakraui, SiMaterialui, SiPostgresql, SiTailwindcss, SiTypescript } from 'react-icons/si';
+import {
+  SiApollographql,
+  SiChakraui,
+  SiMaterialui,
+  SiNestjs,
+  SiPostgresql,
+  SiTailwindcss,
+  SiTypescript,
+} from 'react-icons/si';
 
 import Paragraph from './paragraph';
 import Section from './section';
 
 const TechLinks = () => {
   return (
-    <Box display="flex" flexDirection={{ base: 'column', md: 'row' }}>
-      <Box mr={20}>
+    <Box
+      display="flex"
+      justifyContent={'space-evenly'}
+      flexDirection={{ base: 'column', sm: 'row' }}
+    >
+      <Box>
         <Section delay="0.1">
           <Heading as="h3" variant="section-title">
-            Tecnolog&iacute;as Frontend
+            Frontend
           </Heading>
           <Paragraph>
             <List spacing={2}>
@@ -41,20 +54,44 @@ const TechLinks = () => {
           </Paragraph>
         </Section>
       </Box>
+      <Box>
+        <Section delay="0.1">
+          <Heading as="h3" variant="section-title">
+            Backend
+          </Heading>
+          <Paragraph>
+            <List spacing={2}>
+              <ListItem>
+                <ListIcon as={IoLogoNodejs} color="green.500" />
+                Node.js
+              </ListItem>
+              <ListItem>
+                <ListIcon as={SiTypescript} color="green.500" />
+                Typescript
+              </ListItem>
+              <ListItem>
+                <ListIcon as={SiNestjs} color="green.500" />
+                Nest.js
+              </ListItem>
+              <ListItem>
+                <ListIcon as={GiKoala} color="green.500" />
+                Koa.js
+              </ListItem>
+              <ListItem>
+                <ListIcon as={SiApollographql} color="green.500" />
+                Apollo
+              </ListItem>
+            </List>
+          </Paragraph>
+        </Section>
+      </Box>
+
       <Section delay="0.1">
         <Heading as="h3" variant="section-title">
-          Tecnolog&iacute;as Backend
+          Bases de Datos
         </Heading>
         <Paragraph>
           <List spacing={2}>
-            <ListItem>
-              <ListIcon as={IoLogoNodejs} color="green.500" />
-              NodeJS
-            </ListItem>
-            <ListItem>
-              <ListIcon as={SiTypescript} color="green.500" />
-              Typescript
-            </ListItem>
             <ListItem>
               <ListIcon as={DiMongodb} color="green.500" />
               MongoDB

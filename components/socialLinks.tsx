@@ -3,7 +3,7 @@ import { IoLogoGithub, IoLogoInstagram, IoLogoLinkedin } from 'react-icons/io5';
 
 const SocialLinks = () => {
   return (
-    <List>
+    <List display={'flex'} justifyContent={'center'} mt={8}>
       <ListItem>
         <Link href="https://github.com/jaggervlad" target="_blank">
           <Button

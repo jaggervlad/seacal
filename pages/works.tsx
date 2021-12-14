@@ -16,19 +16,19 @@ const WorksPage: NextPage = () => {
         <Section delay={'0.1'}>
           <ExternalGridItem
             title="Dulce Glamour Comercial"
-            href="http://dulceglamour.net"
+            href="https://res.cloudinary.com/seakal/video/upload/v1639461807/bvtesqahemsykx0qngjy.mp4"
             src={dgCrmThumb}
           >
-            Sistem Comercial, CRM
+            Sistema Comercial, CRM
           </ExternalGridItem>
         </Section>
         <Section delay={'0.1'}>
           <ExternalGridItem
             title="Dulce Glamour Shopping"
-            href="https://dg-shopping.vercel.app"
+            href="https://res.cloudinary.com/seakal/video/upload/v1639462809/jhi74fdwduljbdkwjv0l.mp4"
             src={dgCommerceThumb}
           >
-            Commerce, Shoppin, Catalog
+            Comercio Electrónico, Shopping, Catálogo
           </ExternalGridItem>
         </Section>
       </SimpleGrid>
