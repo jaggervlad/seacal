@@ -21,7 +21,7 @@ export const NextGridItem: React.FC<{
       w="100%"
       textAlign="center"
       borderWidth={2}
-      borderColor={useColorModeValue('gray.300', 'whiteAlpha.300')}
+      borderColor={useColorModeValue('gray.700', 'whiteAlpha.300')}
       borderRadius="lg"
       p={2}
     >
@@ -45,9 +45,9 @@ export const ExternalGridItem: React.FC<{
 }> = ({ children, href, title, src }) => (
   <LinkBox
     w="100%"
+    maxW={{ base: 'lg', md: 'sm' }}
     textAlign="center"
-    borderWidth={2}
-    borderColor={useColorModeValue('gray.300', 'whiteAlpha.300')}
+    borderWidth="1px"
     borderRadius="lg"
     p={2}
   >
