@@ -1,43 +1,29 @@
-import { Button, Icon, Link, List, ListItem } from '@chakra-ui/react';
+import {
+  Button,
+  Icon,
+  Link,
+  List,
+  ListItem,
+  Box,
+  Stack,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import { IoLogoGithub, IoLogoInstagram, IoLogoLinkedin } from 'react-icons/io5';
 
 const SocialLinks = () => {
+  const iconColor = useColorModeValue('teal', 'white');
   return (
-    <List display={'flex'} justifyContent={'center'} mt={8}>
-      <ListItem>
-        <Link href="https://github.com/jaggervlad" target="_blank">
-          <Button
-            variant="ghost"
-            colorScheme="teal"
-            leftIcon={<Icon as={IoLogoGithub} />}
-          >
-            @jaggervlad
-          </Button>
-        </Link>
-      </ListItem>
-      <ListItem>
-        <Link href="https://instagram.com/seacal_dev" target="_blank">
-          <Button
-            variant="ghost"
-            colorScheme="teal"
-            leftIcon={<Icon as={IoLogoInstagram} />}
-          >
-            @seacal_dev
-          </Button>
-        </Link>
-      </ListItem>
-      <ListItem>
-        <Link href="http://linkedin.com/in/seacaldev" target="_blank">
-          <Button
-            variant="ghost"
-            colorScheme="teal"
-            leftIcon={<Icon as={IoLogoLinkedin} />}
-          >
-            @seacal_dev
-          </Button>
-        </Link>
-      </ListItem>
-    </List>
+    <Stack direction="row" justify="center">
+      <Link href="https://github.com/jaggervlad" target="_blank">
+        <Icon as={IoLogoGithub} h={6} w={6} color={iconColor} />
+      </Link>
+      <Link href="https://instagram.com/seacal_dev" target="_blank">
+        <Icon as={IoLogoInstagram} h={6} w={6} color={iconColor} />
+      </Link>
+      <Link href="http://linkedin.com/in/seacaldev" target="_blank">
+        <Icon as={IoLogoLinkedin} h={6} w={6} color={iconColor} />
+      </Link>
+    </Stack>
   );
 };
 

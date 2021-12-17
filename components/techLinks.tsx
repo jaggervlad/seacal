@@ -1,4 +1,11 @@
-import { Box, Heading, List, ListIcon, ListItem } from '@chakra-ui/react';
+import {
+  Heading,
+  List,
+  ListIcon,
+  ListItem as ChakraListItem,
+  ListItemProps,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import { DiMongodb } from 'react-icons/di';
 import { GiKoala } from 'react-icons/gi';
 import { GrMysql } from 'react-icons/gr';
@@ -13,101 +20,92 @@ import {
   SiTypescript,
 } from 'react-icons/si';
 
-import Paragraph from './paragraph';
 import Section from './section';
 
-const TechLinks = () => {
-  return (
-    <Box
-      display="flex"
-      justifyContent={'space-evenly'}
-      flexDirection={{ base: 'column', sm: 'row' }}
-    >
-      <Box>
-        <Section delay="0.1">
-          <Heading as="h3" variant="section-title">
-            Frontend
-          </Heading>
-          <Paragraph>
-            <List spacing={2}>
-              <ListItem>
-                <ListIcon as={IoLogoReact} color="green.500" />
-                ReactJS
-              </ListItem>
-              <ListItem>
-                <ListIcon as={IoLogoJavascript} color="green.500" />
-                JavaScript
-              </ListItem>
-              <ListItem>
-                <ListIcon as={SiChakraui} color="green.500" />
-                Chakra UI
-              </ListItem>
-              <ListItem>
-                <ListIcon as={SiMaterialui} color="green.500" />
-                Material UI
-              </ListItem>
-              <ListItem>
-                <ListIcon as={SiTailwindcss} color="green.500" />
-                TailwindCSS
-              </ListItem>
-            </List>
-          </Paragraph>
-        </Section>
-      </Box>
-      <Box>
-        <Section delay="0.1">
-          <Heading as="h3" variant="section-title">
-            Backend
-          </Heading>
-          <Paragraph>
-            <List spacing={2}>
-              <ListItem>
-                <ListIcon as={IoLogoNodejs} color="green.500" />
-                Node.js
-              </ListItem>
-              <ListItem>
-                <ListIcon as={SiTypescript} color="green.500" />
-                Typescript
-              </ListItem>
-              <ListItem>
-                <ListIcon as={SiNestjs} color="green.500" />
-                Nest.js
-              </ListItem>
-              <ListItem>
-                <ListIcon as={GiKoala} color="green.500" />
-                Koa.js
-              </ListItem>
-              <ListItem>
-                <ListIcon as={SiApollographql} color="green.500" />
-                Apollo
-              </ListItem>
-            </List>
-          </Paragraph>
-        </Section>
-      </Box>
+const ListItem = (props: ListItemProps) => (
+  <ChakraListItem
+    display={'flex'}
+    flexDirection={'column'}
+    alignItems={'center'}
+    textAlign={'center'}
+    justifyContent={'center'}
+    m={4}
+    {...props}
+  >
+    {props.children}
+  </ChakraListItem>
+);
 
-      <Section delay="0.1">
-        <Heading as="h3" variant="section-title">
-          Bases de Datos
-        </Heading>
-        <Paragraph>
-          <List spacing={2}>
-            <ListItem>
-              <ListIcon as={DiMongodb} color="green.500" />
-              MongoDB
-            </ListItem>
-            <ListItem>
-              <ListIcon as={GrMysql} color="green.500" />
-              MySQL
-            </ListItem>
-            <ListItem>
-              <ListIcon as={SiPostgresql} color="green.500" />
-              PostgreSQL
-            </ListItem>
-          </List>
-        </Paragraph>
-      </Section>
-    </Box>
+const TechLinks = () => {
+  const iconColor = useColorModeValue('teal', 'white');
+  return (
+    <Section delay="0.1">
+      <Heading as="h3" variant="section-title">
+        Tecnolog&iacute;as
+      </Heading>
+      <List
+        display={'flex'}
+        flexWrap={'wrap'}
+        justifyContent={'center'}
+        alignItems={'center'}
+        textAlign={'center'}
+      >
+        <ListItem>
+          <ListIcon h={8} w={8} as={IoLogoReact} color={iconColor} />
+          ReactJS
+        </ListItem>
+        <ListItem>
+          <ListIcon h={8} w={8} as={IoLogoJavascript} color={iconColor} />
+          JavaScript
+        </ListItem>
+        <ListItem>
+          <ListIcon h={8} w={8} as={SiChakraui} color={iconColor} />
+          Chakra UI
+        </ListItem>
+        <ListItem>
+          <ListIcon h={8} w={8} as={SiMaterialui} color={iconColor} />
+          Material UI
+        </ListItem>
+        <ListItem>
+          <ListIcon h={8} w={8} as={SiTailwindcss} color={iconColor} />
+          TailwindCSS
+        </ListItem>
+
+        <ListItem>
+          <ListIcon h={8} w={8} as={IoLogoNodejs} color={iconColor} />
+          Node.js
+        </ListItem>
+        <ListItem>
+          <ListIcon h={8} w={8} as={SiTypescript} color={iconColor} />
+          Typescript
+        </ListItem>
+        <ListItem>
+          <ListIcon h={8} w={8} as={SiNestjs} color={iconColor} />
+          Nest.js
+        </ListItem>
+        <ListItem>
+          <ListIcon h={8} w={8} as={GiKoala} color={iconColor} />
+          Koa.js
+        </ListItem>
+        <ListItem>
+          <ListIcon h={8} w={8} as={SiApollographql} color={iconColor} />
+          Apollo
+        </ListItem>
+
+        <ListItem>
+          <ListIcon h={8} w={8} as={DiMongodb} color={iconColor} />
+          MongoDB
+        </ListItem>
+        <ListItem>
+          <ListIcon h={8} w={8} as={GrMysql} color={iconColor} />
+          MySQL
+        </ListItem>
+        <ListItem>
+          <ListIcon h={8} w={8} as={SiPostgresql} color={iconColor} />
+          PostgreSQL
+        </ListItem>
+      </List>
+    </Section>
   );
 };
 

@@ -20,7 +20,7 @@ const Logo = () => {
             fontFamily='M PLUS Rounded 1c", sans-serif'
             fontWeight="bold"
           >
-            Seacal DEV
+            Seacal
           </Text>
         </LogoBox>
       </a>
