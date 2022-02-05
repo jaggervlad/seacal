@@ -1,28 +1,45 @@
-import { Box, Text } from '@chakra-ui/react';
+import Link from 'next/link';
 
-import SocialLinks from './socialLinks';
+const ExternalLink = ({ href, children }) => (
+  <a
+    className="text-slate-500 hover:text-slate-600 transition"
+    target="_blank"
+    rel="noopener noreferrer"
+    href={href}
+  >
+    {children}
+  </a>
+);
 
-const Footer = () => {
+const FooterLink = ({ href, children }) => (
+  <Link href={href}>
+    <a className="text-slate-500 hover:text-slate-600 transition">{children}</a>
+  </Link>
+);
+
+export default function Footer() {
   return (
-    <>
-      <Box
-        align="center"
-        opacity={0.8}
-        fontSize="sm"
-        display={{ base: 'flex' }}
-        flexDirection={'column'}
-        mt={8}
-      >
-        <SocialLinks />
-
-        <Text isTruncated>Hecho con ❤️ por @seacal_dev</Text>
-        <Text>
-          &copy; {new Date().getFullYear()} Sebastian Acosta. Todos los derechos
-          reservados.
-        </Text>
-      </Box>
-    </>
+    <footer className="flex flex-col justify-center items-start max-w-2xl mx-auto w-full mb-8 mt-auto">
+      <hr className="w-full border-1 border-slate-200 dark:border-slate-800 mb-8" />
+      <div className="w-full max-w-2xl grid grid-cols-2 gap-4 pb-16 sm:grid-cols-3">
+        <div className="flex flex-col space-y-4">
+          <FooterLink href="/">Inicio</FooterLink>
+          <FooterLink href="/acerca">Acerca</FooterLink>
+          <FooterLink href="/blog">Blog</FooterLink>
+          <FooterLink href="/snippets">Snippets</FooterLink>
+        </div>
+        <div className="flex flex-col space-y-4">
+          <ExternalLink href="https://www.linkedin.com/in/seacaldev/">
+            LinkedIn
+          </ExternalLink>
+          <ExternalLink href="https://github.com/jaggervlad">
+            GitHub
+          </ExternalLink>
+          <ExternalLink href="https://www.instagram.com/seacal_dev/">
+            Instagram
+          </ExternalLink>
+        </div>
+      </div>
+    </footer>
   );
-};
-
-export default Footer;
+}

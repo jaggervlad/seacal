@@ -1,23 +1,17 @@
-import '../styles/globals.css';
-
-import { ChakraProvider } from '@chakra-ui/react';
-import Fonts from 'components/fonts';
-import { AnimatePresence } from 'framer-motion';
-import theme from 'lib/theme';
-
-import Main from '../components/layouts/main';
+import 'styles/global.css';
+import 'styles/nprogress.css';
 
 import type { AppProps } from 'next/app';
+
+import { ThemeProvider } from 'next-themes';
+import NProgress from 'components/nprogress';
+
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
-    <ChakraProvider theme={theme}>
-      <Fonts />
-      <Main router={router}>
-        <AnimatePresence exitBeforeEnter initial={true}>
-          <Component {...pageProps} key={router.route} />
-        </AnimatePresence>
-      </Main>
-    </ChakraProvider>
+    <ThemeProvider attribute="class">
+      <Component {...pageProps} key={router.route} />
+      <NProgress />
+    </ThemeProvider>
   );
 }
 

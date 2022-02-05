@@ -4,11 +4,7 @@ import type { Router } from 'next/router';
 import Navbar from 'components/navbar';
 import Footer from 'components/footer';
 
-const Main: React.FC<{ router: Router }> = ({
-  children,
-  router,
-  ...customMeta
-}) => {
+const MainContainer: React.FC = ({ children, ...customMeta }) => {
   const meta = {
     title: 'Sebastian Acosta Web Dev',
     description: 'Web developer fullstack',
@@ -16,22 +12,21 @@ const Main: React.FC<{ router: Router }> = ({
   };
 
   return (
-    <Box as="main" pb={8}>
+    <div className="bg-slate-50 dark:bg-slate-900 min-h-screen">
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <Navbar path={router.asPath} />
+      <Navbar />
 
-      <Container maxW="container.md" pt={20}>
+      <main className="flex flex-col justify-center px-8 bg-slate-50 dark:bg-slate-900">
         {children}
-
         <Footer />
-      </Container>
-    </Box>
+      </main>
+    </div>
   );
 };
 
-export default Main;
+export default MainContainer;

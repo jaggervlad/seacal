@@ -5,6 +5,7 @@ import { InferGetStaticPropsType, NextPage } from 'next';
 import { allBlogs } from '.contentlayer/data';
 import { pick } from '@contentlayer/client';
 import BlogPost from 'components/blogPost';
+import Error from 'next/error';
 
 export default function BlogPage({
   posts,
