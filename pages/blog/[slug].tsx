@@ -4,7 +4,7 @@ import { allBlogs } from '.contentlayer/data';
 import type { Blog } from '.contentlayer/types';
 import BlogContainer from 'components/layouts/blog';
 
-export default function Post({ post, tweets }: { post: Blog; tweets: any[] }) {
+export default function Post({ post }: { post: Blog }) {
   const Component = useMDXComponent(post.body.code);
 
   return (
