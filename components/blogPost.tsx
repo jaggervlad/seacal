@@ -1,11 +1,4 @@
-import NextLink from 'next/link';
-import {
-  LinkBox,
-  LinkOverlay,
-  Text,
-  useColorModeValue,
-  Heading,
-} from '@chakra-ui/react';
+import Link from 'next/link';
 import type { Blog } from '.contentlayer/types';
 
 export default function BlogPost({
@@ -14,15 +7,20 @@ export default function BlogPost({
   slug,
 }: Pick<Blog, 'title' | 'summary' | 'slug'>) {
   return (
-    <NextLink href={`/blog/${slug}`}>
-      <LinkBox as="a" w="100%" p={2}>
-        <LinkOverlay href={`/blog/${slug}`}>
-          <Text fontSize={24} fontWeight="semibold" isTruncated as="h4" mt={2}>
-            {title}
-          </Text>
-        </LinkOverlay>
-        <Text fontSize={14}>{summary}</Text>
-      </LinkBox>
-    </NextLink>
+    <Link href={`/blog/${slug}`}>
+      <a className="w-full">
+        <div className="w-full mb-8">
+          <div className="flex flex-col justify-between md:flex-row">
+            <h4 className="w-full mb-2 text-lg font-medium text-gray-900 md:text-xl dark:text-gray-100">
+              {title}
+            </h4>
+            {/* <p className="w-32 mb-4 text-left text-gray-500 md:text-right md:mb-0">
+              {`${views ? new Number(views).toLocaleString() : '–––'} views`}
+            </p> */}
+          </div>
+          <p className="text-gray-600 dark:text-gray-400">{summary}</p>
+        </div>
+      </a>
+    </Link>
   );
 }

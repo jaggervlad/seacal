@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 const ExternalLink = ({ href, children }) => (
   <a
-    className="text-slate-500 hover:text-slate-600 transition"
+    className="text-slate-500 hover:text-slate-600 transition font-medium text-base"
     target="_blank"
-    rel="noopener noreferrer"
+    rel="noreferrer"
     href={href}
   >
     {children}
@@ -13,7 +13,9 @@ const ExternalLink = ({ href, children }) => (
 
 const FooterLink = ({ href, children }) => (
   <Link href={href}>
-    <a className="text-slate-500 hover:text-slate-600 transition">{children}</a>
+    <a className="text-slate-500 hover:text-slate-600 transition font-medium text-base">
+      {children}
+    </a>
   </Link>
 );
 
@@ -25,8 +27,9 @@ export default function Footer() {
         <div className="flex flex-col space-y-4">
           <FooterLink href="/">Inicio</FooterLink>
           <FooterLink href="/acerca">Acerca</FooterLink>
-          <FooterLink href="/blog">Blog</FooterLink>
-          <FooterLink href="/snippets">Snippets</FooterLink>
+          <FooterLink href="/proyectos">Proyectos</FooterLink>
+          {/* <FooterLink href="/blog">Blog</FooterLink>
+          <FooterLink href="/snippets">Snippets</FooterLink> */}
         </div>
         <div className="flex flex-col space-y-4">
           <ExternalLink href="https://www.linkedin.com/in/seacaldev/">

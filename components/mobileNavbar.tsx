@@ -71,8 +71,9 @@ export default function MobileMenu() {
           )}
         >
           <NavItem href="/" title="Inicio" />
-          <NavItem href="/blog" title="Blog" />
-          <NavItem href="/snippets" title="Snippets" />
+          <NavItem href="/proyectos" title="Proyectos" />
+          {/* <NavItem href="/blog" title="Blog" />
+          <NavItem href="/snippets" title="Snippets" /> */}
         </ul>
       )}
     </>

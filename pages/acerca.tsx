@@ -10,20 +10,21 @@ const AboutPage: NextPage = () => {
         </h3>
 
         <p className="text-slate-600 dark:text-slate-400 mb-4">
-          Hola, soy Sebastian. Soy programador, padre y deportista. Trabajo como
-          Desarrollador Web Full Stack (Freelance).
+          Hola soy programador, padre y deportista. Trabajo como Desarrollador
+          Web Full Stack (Freelance).
         </p>
 
         <p className="text-slate-600 dark:text-slate-400 mb-4">
           Tengo conocimientos tanto en el frontend como el backend, disfruto
-          mucho de aprender nuevas tecnologias, buenas practicas, patrones de
-          diseño, arquitectura, diseño.
+          mucho de aprender nuevas tecnologias, buenas prácticas de desarrollo,
+          patrones de diseño y arquitectura.
         </p>
 
         <p className="text-slate-600 dark:text-slate-400 mb-4">
-          Comence estudiando en el Instituto Tecnologico Cibertec, pero me
-          retire luego del 2do ciclo. En adelante todo lo que he aprendido ha
-          sido de forma autodidacta y por cursos online. 😁
+          Comence mi capacitación como desarrollador en el Instituto Tecnológico
+          Cibertec(2do ciclo), luego de esto continue mi aprendizaje y
+          capacitación de forma autodidacta y por cursos online(Udemy, Platzi,
+          EdTeam). 😁
         </p>
       </div>
     </MainContainer>

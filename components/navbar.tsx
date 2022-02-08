@@ -22,8 +22,9 @@ const Navbar: React.FC = () => {
         <div className="ml-[-0.60rem]">
           <MobileMenu />
           <NavItem href="/" text="Inicio" />
-          <NavItem href="/blog" text="Blog" />
-          <NavItem href="/snippets" text="Snippets" />
+          <NavItem href="/proyectos" text="Proyectos" />
+          {/* <NavItem href="/blog" text="Blog" />
+          <NavItem href="/snippets" text="Snippets" /> */}
         </div>
         <button
           aria-label="Toggle Dark Mode"
