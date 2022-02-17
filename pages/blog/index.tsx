@@ -1,13 +1,10 @@
-import { Heading } from '@chakra-ui/react';
-import Layout from 'components/layouts/blog';
-import Section from 'components/section';
-import { InferGetStaticPropsType, NextPage } from 'next';
+import { useState } from 'react';
+import { InferGetStaticPropsType } from 'next';
 import { allBlogs } from '.contentlayer/data';
 import { pick } from '@contentlayer/client';
+
 import BlogPost from 'components/blogPost';
-import Error from 'next/error';
 import MainContainer from 'components/layouts/main';
-import { useState } from 'react';
 
 export default function BlogPage({
   posts,

@@ -4,10 +4,10 @@ import { NextPage } from 'next';
 const AboutPage: NextPage = () => {
   return (
     <MainContainer>
-      <div className="flex flex-col justify-center items-start max-w-2xl border-slate-200 dark:border-slate-700 mx-auto pb-16">
-        <h3 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
+      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto pb-16">
+        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
           Acerca de mi
-        </h3>
+        </h1>
 
         <p className="text-slate-600 dark:text-slate-400 mb-4">
           Hola soy programador, padre y deportista. Trabajo como Desarrollador

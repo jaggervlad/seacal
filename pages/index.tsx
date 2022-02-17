@@ -4,6 +4,9 @@ import type { NextPage } from 'next';
 import { FaNodeJs, FaReact } from 'react-icons/fa';
 import { DiMongodb } from 'react-icons/di';
 import { AiOutlineConsoleSql } from 'react-icons/ai';
+import cn from 'classnames';
+import GradientButton from 'components/gradientButton';
+import { useRouter } from 'next/router';
 
 const Profile = () => (
   <div className="flex flex-col-reverse sm:flex-row items-start">
@@ -31,22 +34,27 @@ const Profile = () => (
   </div>
 );
 
-const ExternalLink = ({ href, children }) => (
-  <a
-    href={href}
-    target={'_blank'}
-    rel="noreferrer"
-    className="underline font-mono font-semibold"
-  >
-    {children}
-  </a>
-);
-
 const Home: NextPage = () => {
+  const router = useRouter();
   return (
     <MainContainer>
       <div className="flex flex-col justify-center items-start max-w-2xl border-slate-200 dark:border-slate-700 mx-auto pb-8">
         <Profile />
+
+        <div className="flex w-full justify-center gap-x-6 mb-6">
+          <GradientButton
+            handleClick={() => router.push('/contacto')}
+            gradient="from-[#3B82F6] to-[#9333EA]"
+          >
+            Contactame
+          </GradientButton>
+          <GradientButton
+            handleClick={() => console.log('ver cv')}
+            gradient="from-green-600 to-cyan-400"
+          >
+            Descargar CV
+          </GradientButton>
+        </div>
 
         <div>
           <h3 className="font-bold text-3xl md:text-4xl tracking-tight mb-1 text-black dark:text-white">

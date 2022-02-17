@@ -1,6 +1,4 @@
-import { Container, Box } from '@chakra-ui/react';
 import Head from 'next/head';
-import type { Router } from 'next/router';
 import Navbar from 'components/navbar';
 import Footer from 'components/footer';
 

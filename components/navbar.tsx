@@ -23,6 +23,7 @@ const Navbar: React.FC = () => {
           <MobileMenu />
           <NavItem href="/" text="Inicio" />
           <NavItem href="/proyectos" text="Proyectos" />
+          <NavItem href="/contacto" text="Contacto" />
           {/* <NavItem href="/blog" text="Blog" />
           <NavItem href="/snippets" text="Snippets" /> */}
         </div>
