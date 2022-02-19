@@ -27,7 +27,7 @@ async function generate() {
 
             return `
               <url>
-                  <loc>${`https://seacal.vercel.app/${route}`}</loc>
+                  <loc>${`https://seacal.vercel.app${route}`}</loc>
               </url>
             `;
           })
