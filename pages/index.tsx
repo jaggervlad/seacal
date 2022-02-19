@@ -49,7 +49,11 @@ const Home: NextPage = () => {
             Contactame
           </GradientButton>
           <GradientButton
-            handleClick={() => console.log('ver cv')}
+            handleClick={() =>
+              router.replace(
+                'https://docs.google.com/document/d/1A3Ke6jFtFUJs1OQwrgHfVjntyPXF5rgEeJ3YIzu1mxk/edit?usp=sharing'
+              )
+            }
             gradient="from-green-600 to-cyan-400"
           >
             Descargar CV

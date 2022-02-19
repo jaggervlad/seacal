@@ -6,7 +6,7 @@ import ContactInfo from 'components/contactInfo';
 
 const ContacPage: NextPage = () => {
   return (
-    <MainContainer>
+    <MainContainer title="Contacto - Sebastian Acosta">
       <div className="max-w-2xl flex flex-col justify-center items-start w-full mx-auto">
         <div className="">
           <ContactInfo />

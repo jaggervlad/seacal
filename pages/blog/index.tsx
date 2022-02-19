@@ -17,7 +17,7 @@ export default function BlogPage({
   });
 
   return (
-    <MainContainer>
+    <MainContainer title="Blog - Sebastian Acosta">
       <div className="flex flex-col items-start justify-center max-w-2xl w-full mx-auto pb-16">
         <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white">
           Blog

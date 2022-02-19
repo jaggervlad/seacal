@@ -100,7 +100,7 @@ const projects: Project[] = [
 
 const ProjectsPage: NextPage = () => {
   return (
-    <MainContainer>
+    <MainContainer title="Proyectos - Sebastian Acosta">
       <div className="flex flex-col items-start justify-center pb-16 mx-auto max-w-2xl w-full">
         <h1 className="text-3xl font-bold text-black mb-4 md:text-5xl dark:text-white">
           Proyectos Personales

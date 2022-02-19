@@ -7,6 +7,7 @@ import {
   useFormContext,
 } from 'react-hook-form';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { toast } from 'react-toastify';
 
 interface IFormData {
   email: string;
@@ -67,11 +68,7 @@ const ContactForm: FC = () => {
       setServerErrors(data.errors);
     } else {
       reset();
-      setSuccessMessage(data.message);
-
-      setTimeout(() => {
-        setSuccessMessage('');
-      }, 3000);
+      toast('Mensaje creado correctamente!');
     }
   };
 

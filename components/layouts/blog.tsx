@@ -11,11 +11,10 @@ export default function BlogContainer({
 }: PropsWithChildren<{ post: Blog }>) {
   return (
     <Container
-    // title={`${post.title} – Lee Robinson`}
-    // description={post.summary}
-    // image={`https://leerob.io${post.image}`}
-    // date={new Date(post.publishedAt).toISOString()}
-    // type="article"
+      title={`${post.title} – Lee Robinson`}
+      description={post.summary}
+      date={new Date(post.publishedAt).toISOString()}
+      type="article"
     >
       <article className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
         <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white">

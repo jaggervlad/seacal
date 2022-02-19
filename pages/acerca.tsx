@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 
 const AboutPage: NextPage = () => {
   return (
-    <MainContainer>
+    <MainContainer title="Acerca - Sebastian Acosta">
       <div className="flex flex-col justify-center items-start max-w-2xl mx-auto pb-16">
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
           Acerca de mi
