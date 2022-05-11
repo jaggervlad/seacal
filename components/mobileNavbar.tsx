@@ -15,7 +15,7 @@ const NavItem = ({ href, title }: { href: string; title: string }) => {
         isActive
           ? 'font-semibold text-slate-800 dark:text-slate-200'
           : 'font-normal text-slate-600 dark:text-slate-400',
-        'border-b border-slate-300 dark:border-slate-700 text-sm'
+        'border-b border-slate-300 text-sm dark:border-slate-700'
       )}
       style={{ transitionDelay: '250ms' }}
     >
@@ -66,13 +66,14 @@ export default function MobileMenu() {
         <ul
           className={cn(
             styles.menu,
-            'flex flex-col absolute bg-slate-50 dark:bg-slate-900',
+            'absolute flex flex-col bg-slate-50 dark:bg-slate-900',
             isMenuRendered && styles.menuRendered
           )}
         >
           <NavItem href="/" title="Inicio" />
           <NavItem href="/proyectos" title="Proyectos" />
           <NavItem href="/contacto" title="Contacto" />
+          <NavItem href="/curriculum.pdf" title="Curriculum" />
           {/* <NavItem href="/blog" title="Blog" />
           <NavItem href="/snippets" title="Snippets" /> */}
         </ul>
@@ -84,7 +85,7 @@ export default function MobileMenu() {
 function MenuIcon(props: JSX.IntrinsicElements['svg']) {
   return (
     <svg
-      className="h-5 w-5 absolute text-slate-900 dark:text-slate-100"
+      className="absolute h-5 w-5 text-slate-900 dark:text-slate-100"
       width="20"
       height="20"
       viewBox="0 0 20 20"
@@ -112,7 +113,7 @@ function MenuIcon(props: JSX.IntrinsicElements['svg']) {
 function CrossIcon(props: JSX.IntrinsicElements['svg']) {
   return (
     <svg
-      className="h-5 w-5 absolute text-slate-900 dark:text-slate-100"
+      className="absolute h-5 w-5 text-slate-900 dark:text-slate-100"
       viewBox="0 0 24 24"
       width="24"
       height="24"

@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { useTheme } from 'next-themes';
 import cn from 'classnames';
-
 import MobileMenu from './mobileNavbar';
 
 const Navbar: React.FC = () => {
@@ -15,7 +14,7 @@ const Navbar: React.FC = () => {
 
   return (
     <div className="flex flex-col justify-center px-8">
-      <nav className="flex items-center justify-between w-full relative max-w-2xl border-slate-200 dark:border-slate-700 mx-auto pt-8 pb-8 sm:pb-16  text-slate-900 bg-slate-50  dark:bg-slate-900 bg-opacity-60 dark:text-slate-100">
+      <nav className="relative mx-auto flex w-full max-w-2xl items-center justify-between border-slate-200 bg-slate-50 bg-opacity-60 pt-8 pb-8  text-slate-900 dark:border-slate-700  dark:bg-slate-900 dark:text-slate-100 sm:pb-16">
         <a href="#skip" className="skip-nav">
           Skip to content
         </a>
@@ -24,13 +23,14 @@ const Navbar: React.FC = () => {
           <NavItem href="/" text="Inicio" />
           <NavItem href="/proyectos" text="Proyectos" />
           <NavItem href="/contacto" text="Contacto" />
+          <NavItem href="/curriculum.pdf" text="Curriculum" />
           {/* <NavItem href="/blog" text="Blog" />
           <NavItem href="/snippets" text="Snippets" /> */}
         </div>
         <button
           aria-label="Toggle Dark Mode"
           type="button"
-          className="w-9 h-9 bg-slate-200 rounded-lg dark:bg-slate-600 flex items-center justify-center  hover:ring-2 ring-slate-300  transition-all"
+          className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-200 ring-slate-300  transition-all hover:ring-2  dark:bg-slate-600"
           onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
         >
           {mounted && <ThemeIcons resolvedTheme={resolvedTheme} />}
@@ -51,7 +51,7 @@ function NavItem({ href, text }) {
           isActive
             ? 'font-semibold text-slate-800 dark:text-slate-200'
             : 'font-normal text-slate-600 dark:text-slate-400',
-          'hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 transition-all'
+          'hidden rounded-lg p-1 transition-all hover:bg-slate-200 dark:hover:bg-slate-800 sm:px-3 sm:py-2 md:inline-block'
         )}
       >
         <span className="capsize">{text}</span>
@@ -67,7 +67,7 @@ function ThemeIcons({ resolvedTheme }: { resolvedTheme: string }) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      className="w-5 h-5 text-slate-800 dark:text-slate-200"
+      className="h-5 w-5 text-slate-800 dark:text-slate-200"
     >
       {resolvedTheme === 'dark' ? (
         <path

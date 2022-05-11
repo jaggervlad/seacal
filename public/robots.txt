@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://seacal.vercel.app/sitemap.xml

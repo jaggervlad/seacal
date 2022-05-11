@@ -18,7 +18,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div
       key={title}
-      className="flex flex-col rounded-lg border dark:border-slate-400 shadow-lg overflow-hidden"
+      className="flex flex-col overflow-hidden rounded-lg border shadow-lg dark:border-slate-400"
     >
       <div className="flex-shrink-0">
         <Image
@@ -30,7 +30,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           alt={title}
         />
       </div>
-      <div className="flex-1 bg-white dark:bg-slate-900  p-6 flex flex-col justify-between">
+      <div className="flex flex-1 flex-col  justify-between bg-white p-6 dark:bg-slate-900">
         <div className="flex-1">
           <h3 className="text-2xl font-bold tracking-tight text-black dark:text-white">
             {title}
@@ -45,7 +45,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
             href={codeUrl}
             target={'_blank'}
             rel="noreferrer"
-            className="text-black font-semibold text-base cursor-pointer border border-slate-600 p-2 rounded dark:border-slate-200 dark:text-slate-200"
+            className="cursor-pointer rounded border border-slate-600 p-2 text-base font-semibold text-black dark:border-slate-200 dark:text-slate-200"
           >
             <div className="flex items-center">
               Ver Codigo
@@ -56,7 +56,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
             href={demoUrl}
             target={'_blank'}
             rel="noreferrer"
-            className="text-black font-semibold text-base cursor-pointer border border-slate-600 p-2 rounded dark:border-slate-200 dark:text-slate-200"
+            className="cursor-pointer rounded border border-slate-600 p-2 text-base font-semibold text-black dark:border-slate-200 dark:text-slate-200"
           >
             <div className="flex items-center">
               Demo
@@ -76,7 +76,7 @@ const projects: Project[] = [
     codeUrl: 'https://github.com/jaggervlad/realestate-clone',
     demoUrl: 'https://realestate-nine-alpha.vercel.app/',
     description:
-      'Pagina web de bienes raices, creado con Next.js, Chakra UI and Rapidapi, Axios and Framer Motion.',
+      'Pagina web de bienes raices, creado con Next.js, Chakra UI y Rapidapi, Axios y Framer Motion.',
     imageUrl: '/images/projects/realestate-clone.png',
   },
   {
@@ -101,8 +101,8 @@ const projects: Project[] = [
 const ProjectsPage: NextPage = () => {
   return (
     <MainContainer title="Proyectos - Sebastian Acosta">
-      <div className="flex flex-col items-start justify-center pb-16 mx-auto max-w-2xl w-full">
-        <h1 className="text-3xl font-bold text-black mb-4 md:text-5xl dark:text-white">
+      <div className="mx-auto flex w-full max-w-2xl flex-col items-start justify-center pb-16">
+        <h1 className="mb-4 text-3xl font-bold text-black dark:text-white md:text-5xl">
           Proyectos Personales
         </h1>
 
@@ -111,7 +111,7 @@ const ProjectsPage: NextPage = () => {
           mi aprendizaje. Pueden ver el codigo en mi github y la demo.
         </p>
 
-        <div className="mt-12 max-w-lg mx-auto grid gap-y-6 gap-2 grid-cols-1 lg:max-w-none">
+        <div className="mx-auto mt-12 grid max-w-lg grid-cols-1 gap-2 gap-y-6 lg:max-w-none">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
