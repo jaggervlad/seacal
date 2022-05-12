@@ -28,10 +28,10 @@ export default class Document extends NextDocument {
             href="favicon/safari-pinned-tab.svg"
             color="#5bbad5"
           />
-          <meta name="msapplication-TileColor" content="#da532c" />
+          <meta name="msapplication-TileColor" content="#00aba9" />
           <meta name="theme-color" content="#ffffff" />
         </Head>
-        <body className="bg-slate-50 dark:bg-slate-900 text-slate-50 dark:text-slate-900">
+        <body className="bg-slate-50 text-slate-50 dark:bg-slate-900 dark:text-slate-900">
           <Main />
           <NextScript />
         </body>
