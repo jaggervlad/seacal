@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const ExternalLink = ({ href, children }) => (
   <a
-    className="text-slate-500 hover:text-slate-600 transition font-medium text-base"
+    className="text-base font-medium text-slate-500 transition hover:text-slate-600"
     target="_blank"
     rel="noreferrer"
     href={href}
@@ -13,7 +13,7 @@ const ExternalLink = ({ href, children }) => (
 
 const FooterLink = ({ href, children }) => (
   <Link href={href}>
-    <a className="text-slate-500 hover:text-slate-600 transition font-medium text-base">
+    <a className="text-base font-medium text-slate-500 transition hover:text-slate-600">
       {children}
     </a>
   </Link>
@@ -21,9 +21,9 @@ const FooterLink = ({ href, children }) => (
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col justify-center items-start max-w-2xl mx-auto w-full mb-8 mt-auto">
-      <hr className="w-full border-1 border-slate-200 dark:border-slate-800 mb-8" />
-      <div className="w-full max-w-2xl grid grid-cols-2 gap-4 pb-16 sm:grid-cols-3">
+    <footer className="mx-auto mb-8 mt-auto flex w-full max-w-2xl flex-col items-start justify-center">
+      <hr className="border-1 mb-8 w-full border-slate-200 dark:border-slate-800" />
+      <div className="grid w-full max-w-2xl grid-cols-2 gap-4 pb-16 sm:grid-cols-3">
         <div className="flex flex-col space-y-4">
           <FooterLink href="/">Inicio</FooterLink>
           <FooterLink href="/acerca">Acerca</FooterLink>
@@ -41,6 +41,11 @@ export default function Footer() {
           <ExternalLink href="https://www.instagram.com/seacal_dev/">
             Instagram
           </ExternalLink>
+        </div>
+
+        <div className="flex flex-col space-y-4">
+          <FooterLink href="/contacto">Contacto</FooterLink>
+          <FooterLink href="/curriculum.pdf">Curriculum</FooterLink>
         </div>
       </div>
     </footer>

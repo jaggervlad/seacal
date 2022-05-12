@@ -1,9 +1,9 @@
-import MainContainer from 'components/layouts/main';
+import { MainLayout } from 'components/layouts';
 import { NextPage } from 'next';
 
 const AboutPage: NextPage = () => {
   return (
-    <MainContainer title="Acerca - Sebastian Acosta">
+    <MainLayout title="Acerca - Sebastian Acosta">
       <div className="mx-auto flex max-w-2xl flex-col items-start justify-center pb-16">
         <h1 className="mb-4 text-3xl font-extrabold tracking-tight text-black dark:text-white md:text-5xl">
           Acerca de mi
@@ -27,7 +27,7 @@ const AboutPage: NextPage = () => {
           EdTeam). 😁
         </p>
       </div>
-    </MainContainer>
+    </MainLayout>
   );
 };
 
