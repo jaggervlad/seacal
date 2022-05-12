@@ -8,14 +8,14 @@ const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div
       key={title}
-      className="flex flex-col overflow-hidden rounded-lg border shadow-lg dark:border-slate-400"
+      className="flex flex-col overflow-hidden rounded-lg shadow-lg"
     >
       <div className="flex-shrink-0 p-2">
         <Image
           width={500}
           height={225}
           layout="responsive"
-          className="rounded-md object-cover"
+          className="rounded-lg object-cover"
           src={imageUrl}
           alt={title}
         />
