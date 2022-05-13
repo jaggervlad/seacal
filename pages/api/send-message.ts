@@ -3,6 +3,18 @@ import dbConnect from 'lib/dbConnect';
 import Message from 'models/Message';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+async function validateHuman(token: string): Promise<boolean> {
+  const secret = process.env.RECAPTCHA_SECRET_KEY;
+  const response = await fetch(
+    `https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${token}`,
+    {
+      method: 'POST',
+    }
+  );
+  const data = await response.json();
+  return data.success;
+}
+
 interface FormData {
   email: string;
   message: string;
@@ -33,16 +45,4 @@ export default async function handler(
     res.status(200);
     res.json({ message: 'Mensaje creado correctamente' });
   }
-}
-
-async function validateHuman(token: string): Promise<boolean> {
-  const secret = process.env.RECAPTCHA_SECRET_KEY;
-  const response = await fetch(
-    `https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${token}`,
-    {
-      method: 'POST',
-    }
-  );
-  const data = await response.json();
-  return data.success;
 }

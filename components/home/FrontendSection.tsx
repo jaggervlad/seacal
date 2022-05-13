@@ -1,5 +1,4 @@
-const FrontendSection: React.FC = () => {
-  return (
+const FrontendSection: React.FC = () => (
     <div>
       <h4 className="mb-1 text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl">
         Frontend
@@ -54,6 +53,5 @@ const FrontendSection: React.FC = () => {
       </ul>
     </div>
   );
-};
 
 export default FrontendSection;

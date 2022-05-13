@@ -3,7 +3,7 @@ import { BiLinkExternal } from 'react-icons/bi';
 import { BsGithub } from 'react-icons/bs';
 import { Project } from 'types';
 
-const ProjectCard = ({ project }: { project: Project }) => {
+function ProjectCard({ project }: { project: Project }) {
   const { title, demoUrl, codeUrl, imageUrl, description } = project;
   return (
     <div
@@ -33,7 +33,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
         <div className="mt-6 flex items-center space-x-8">
           <a
             href={codeUrl}
-            target={'_blank'}
+            target="_blank"
             rel="noreferrer"
             className="flex cursor-pointer items-center text-base font-semibold text-black hover:text-opacity-80 dark:text-slate-200 dark:hover:text-opacity-80"
           >
@@ -43,7 +43,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
           <a
             href={demoUrl}
-            target={'_blank'}
+            target="_blank"
             rel="noreferrer"
             className="flex cursor-pointer items-center text-base font-semibold text-black hover:text-opacity-80 dark:border-slate-200 dark:text-slate-200 dark:hover:text-opacity-80"
           >
@@ -54,6 +54,6 @@ const ProjectCard = ({ project }: { project: Project }) => {
       </div>
     </div>
   );
-};
+}
 
 export default ProjectCard;

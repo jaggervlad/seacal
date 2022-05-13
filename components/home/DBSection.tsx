@@ -1,5 +1,4 @@
-const DBSection: React.FC = () => {
-  return (
+const DBSection: React.FC = () => (
     <div>
       <h4 className="mb-1 text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl">
         Bases de Datos
@@ -14,6 +13,5 @@ const DBSection: React.FC = () => {
       </p>
     </div>
   );
-};
 
 export default DBSection;

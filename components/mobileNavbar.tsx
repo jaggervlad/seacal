@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import styles from 'styles/mobile-menu.module.css';
 import { useRouter } from 'next/router';
 
-const NavItem = ({ href, title }: { href: string; title: string }) => {
+function NavItem({ href, title }: { href: string; title: string }) {
   const router = useRouter();
   const isActive = router.asPath === href;
 
@@ -24,7 +24,7 @@ const NavItem = ({ href, title }: { href: string; title: string }) => {
       </Link>
     </li>
   );
-};
+}
 export default function MobileMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { mounted: isMenuMounted, rendered: isMenuRendered } = useDelayedRender(
@@ -45,11 +45,9 @@ export default function MobileMenu() {
     }
   }
 
-  useEffect(() => {
-    return function cleanup() {
+  useEffect(() => function cleanup() {
       document.body.style.overflow = '';
-    };
-  }, []);
+    }, []);
 
   return (
     <>

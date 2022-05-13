@@ -1,5 +1,4 @@
-const KnowledegSection: React.FC = () => {
-  return (
+const KnowledegSection: React.FC = () => (
     <div>
       <h3 className="mb-1 text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl">
         Conocimientos
@@ -13,6 +12,5 @@ const KnowledegSection: React.FC = () => {
       </p>
     </div>
   );
-};
 
 export default KnowledegSection;

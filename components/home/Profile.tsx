@@ -1,5 +1,5 @@
-const Profile = () => (
-  <div className="flex flex-col-reverse items-start sm:flex-row">
+function Profile() {
+  return <div className="flex flex-col-reverse items-start sm:flex-row">
     <div className="flex flex-col pr-8">
       <h1 className="mb-1 text-3xl font-extrabold tracking-tight text-black dark:text-white md:text-5xl">
         Sebastian Acosta
@@ -22,6 +22,6 @@ const Profile = () => (
       />
     </div> */}
   </div>
-);
+}
 
 export default Profile;

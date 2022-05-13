@@ -18,9 +18,10 @@ const toastOpts: ToastContainerProps = {
 };
 
 function MyApp({ Component, pageProps, router }: AppProps) {
+  const AnyComponent = Component as any;
   return (
     <ThemeProvider attribute="class">
-      <Component {...pageProps} key={router.route} />
+      <AnyComponent {...pageProps} key={router.route} />
       <ToastContainer {...toastOpts} />
       <NProgress />
     </ThemeProvider>

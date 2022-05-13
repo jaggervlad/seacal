@@ -1,12 +1,11 @@
-import { Fragment } from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BiCurrentLocation } from 'react-icons/bi';
 import { BsLinkedin } from 'react-icons/bs';
 
-const ContactInfo = () => {
+function ContactInfo() {
   return (
-    <Fragment>
-      <h2 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl dark:text-slate-100">
+    <>
+      <h2 className="text-2xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100 sm:text-3xl">
         Ponte en contacto conmigo
       </h2>
       <p className="mt-3 text-lg leading-6 text-slate-600 dark:text-slate-400">
@@ -19,7 +18,7 @@ const ContactInfo = () => {
           <dt className="sr-only">Phone number</dt>
           <dd className="flex">
             <BiCurrentLocation
-              className="flex-shrink-0 h-6 w-6 text-slate-600 dark:text-slate-400"
+              className="h-6 w-6 flex-shrink-0 text-slate-600 dark:text-slate-400"
               aria-hidden="true"
             />
             <span className="ml-3 text-slate-600 dark:text-slate-400">
@@ -31,14 +30,14 @@ const ContactInfo = () => {
           <dt className="sr-only">Phone number</dt>
           <dd className="flex">
             <BsLinkedin
-              className="flex-shrink-0 h-6 w-6 text-slate-600 dark:text-slate-400"
+              className="h-6 w-6 flex-shrink-0 text-slate-600 dark:text-slate-400"
               aria-hidden="true"
             />
             <a
               href="https://www.linkedin.com/in/seacaldev/"
-              target={'_blank'}
+              target="_blank"
               rel="nofollow noreferrer"
-              className="ml-3 text-slate-600 dark:text-slate-400 hover:underline"
+              className="ml-3 text-slate-600 hover:underline dark:text-slate-400"
             >
               https://www.linkedin.com
             </a>
@@ -48,7 +47,7 @@ const ContactInfo = () => {
           <dt className="sr-only">Email</dt>
           <dd className="flex">
             <AiOutlineMail
-              className="flex-shrink-0 h-6 w-6 text-slate-600 dark:text-slate-400"
+              className="h-6 w-6 flex-shrink-0 text-slate-600 dark:text-slate-400"
               aria-hidden="true"
             />
             <span className="ml-3 text-slate-600 dark:text-slate-400">
@@ -57,8 +56,8 @@ const ContactInfo = () => {
           </dd>
         </div>
       </dl>
-    </Fragment>
+    </>
   );
-};
+}
 
 export default ContactInfo;

@@ -1,4 +1,5 @@
 import { Project } from 'types';
+
 export { default as ProjectCard } from './ProjectCard';
 
 export const projects: Project[] = [

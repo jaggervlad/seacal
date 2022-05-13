@@ -14,7 +14,7 @@ interface IFormData {
   message: string;
 }
 
-const FormErrorMessage = ({ name }: { name: string }) => {
+function FormErrorMessage({ name }: { name: string }) {
   const {
     formState: { errors },
   } = useFormContext();
@@ -32,7 +32,7 @@ const FormErrorMessage = ({ name }: { name: string }) => {
       />
     </div>
   );
-};
+}
 
 const ContactForm: FC = () => {
   const [serverErrors, setServerErrors] = useState([]);
@@ -136,7 +136,7 @@ const ContactForm: FC = () => {
           block w-full shadow-sm py-3 px-4 placeholder-slate-500 focus:ring-cyan-500 focus:border-cyan-500 
           border border-slate-300 rounded-md dark:bg-slate-900 text-slate-900 dark:text-slate-100"
             placeholder="Dejame tu mensaje"
-            defaultValue={''}
+            defaultValue=""
           />
           <FormErrorMessage name="message" />
         </div>

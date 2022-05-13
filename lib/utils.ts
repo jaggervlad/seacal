@@ -10,9 +10,7 @@ type ConvertPick<T> = ConvertUndefined<T> & PickRequired<T>;
 export const pick = <Obj, Keys extends keyof Obj>(
   obj: Obj,
   keys: Keys[]
-): ConvertPick<{ [K in Keys]: Obj[K] }> => {
-  return keys.reduce((acc, key) => {
+): ConvertPick<{ [K in Keys]: Obj[K] }> => keys.reduce((acc, key) => {
     acc[key] = obj[key];
     return acc;
   }, {} as any);
-};

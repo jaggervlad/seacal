@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { InferGetStaticPropsType } from 'next';
-import { allBlogs } from '.contentlayer/data';
 import { pick } from '@contentlayer/client';
 
 import BlogPost from 'components/blogPost';
 import MainContainer from 'components/layouts/main';
+import { allBlogs } from '.contentlayer/data';
 
 export default function BlogPage({
   posts,
@@ -18,8 +18,8 @@ export default function BlogPage({
 
   return (
     <MainContainer title="Blog - Sebastian Acosta">
-      <div className="flex flex-col items-start justify-center max-w-2xl w-full mx-auto pb-16">
-        <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white">
+      <div className="mx-auto flex w-full max-w-2xl flex-col items-start justify-center pb-16">
+        <h1 className="mb-4 text-3xl font-bold tracking-tight text-black dark:text-white md:text-5xl">
           Blog
         </h1>
 
@@ -31,16 +31,16 @@ export default function BlogPage({
             Uso la barra de busqueda para buscar por titulos.`}
         </p>
 
-        <div className="relative w-full mb-4">
+        <div className="relative mb-4 w-full">
           <input
             aria-label="Search articles"
             type="text"
             onChange={(e) => setSearchValue(e.target.value)}
             placeholder="Buscar Articulos"
-            className="block w-full px-4 py-2 text-slate-900 bg-white border border-slate-300 rounded-md dark:border-slate-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:text-slate-100"
+            className="block w-full rounded-md border border-slate-300 bg-white px-4 py-2 text-slate-900 focus:border-blue-500 focus:ring-blue-500 dark:border-slate-900 dark:bg-slate-800 dark:text-slate-100"
           />
           <svg
-            className="absolute w-5 h-5 text-slate-400 right-3 top-3 dark:text-slate-300"
+            className="absolute right-3 top-3 h-5 w-5 text-slate-400 dark:text-slate-300"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -54,7 +54,7 @@ export default function BlogPage({
             />
           </svg>
 
-          <h3 className="mt-8 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white">
+          <h3 className="mt-8 mb-4 text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl">
             Todos Los Articulos
           </h3>
           {!filteredPosts.length && (

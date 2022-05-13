@@ -1,5 +1,4 @@
-const BackendSection: React.FC = () => {
-  return (
+const BackendSection: React.FC = () => (
     <div>
       <h4 className="mb-1 text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl">
         Backend
@@ -28,6 +27,5 @@ const BackendSection: React.FC = () => {
       </ul>
     </div>
   );
-};
 
 export default BackendSection;

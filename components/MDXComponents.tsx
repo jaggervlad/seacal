@@ -14,8 +14,8 @@ function ImageWithTheme(props) {
   );
 }
 
-const CustomLink = (props) => {
-  const href = props.href;
+function CustomLink(props: any) {
+  const { href } = props;
   const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'));
 
   if (isInternalLink) {
@@ -27,7 +27,7 @@ const CustomLink = (props) => {
   }
 
   return <a target="_blank" rel="noopener noreferrer" {...props} />;
-};
+}
 
 function RoundedImage(props) {
   return <Image alt={props.alt} className="rounded-lg" {...props} />;

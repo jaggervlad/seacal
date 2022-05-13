@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
-const ExternalLink = ({ href, children }) => (
-  <a
+function ExternalLink({ href, children }) {
+  return <a
     className="text-base font-medium text-slate-500 transition hover:text-slate-600"
     target="_blank"
     rel="noreferrer"
@@ -9,15 +9,15 @@ const ExternalLink = ({ href, children }) => (
   >
     {children}
   </a>
-);
+}
 
-const FooterLink = ({ href, children }) => (
-  <Link href={href}>
+function FooterLink({ href, children }) {
+  return <Link href={href}>
     <a className="text-base font-medium text-slate-500 transition hover:text-slate-600">
       {children}
     </a>
   </Link>
-);
+}
 
 export default function Footer() {
   return (

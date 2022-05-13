@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Navbar from 'components/navbar';
 import Footer from 'components/footer';
 
-const MainContainer = (props) => {
+function MainContainer(props) {
   const { children, ...customMeta } = props;
   const meta = {
     title: 'Sebastian Acosta - Desarrollador',
@@ -27,6 +27,6 @@ const MainContainer = (props) => {
       </main>
     </div>
   );
-};
+}
 
 export default MainContainer;
