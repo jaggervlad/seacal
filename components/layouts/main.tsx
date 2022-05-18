@@ -1,6 +1,5 @@
 import Head from 'next/head';
-import Navbar from 'components/navbar';
-import Footer from 'components/footer';
+import { Navbar, Footer } from 'components/customs';
 
 function MainContainer(props) {
   const { children, ...customMeta } = props;
@@ -11,7 +10,7 @@ function MainContainer(props) {
   };
 
   return (
-    <div className="bg-slate-50 dark:bg-slate-900 min-h-screen">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-900">
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
@@ -21,7 +20,7 @@ function MainContainer(props) {
 
       <Navbar />
 
-      <main className="flex flex-col justify-center px-8 bg-slate-50 dark:bg-slate-900">
+      <main className="flex flex-col justify-center bg-slate-50 px-8 dark:bg-slate-900">
         {children}
         <Footer />
       </main>

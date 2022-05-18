@@ -1,23 +1,5 @@
-import Link from 'next/link';
-
-function ExternalLink({ href, children }) {
-  return <a
-    className="text-base font-medium text-slate-500 transition hover:text-slate-600"
-    target="_blank"
-    rel="noreferrer"
-    href={href}
-  >
-    {children}
-  </a>
-}
-
-function FooterLink({ href, children }) {
-  return <Link href={href}>
-    <a className="text-base font-medium text-slate-500 transition hover:text-slate-600">
-      {children}
-    </a>
-  </Link>
-}
+import FooterLink from './FooterLink';
+import FooterExternalLink from './FooterExternalLink';
 
 export default function Footer() {
   return (
@@ -32,15 +14,15 @@ export default function Footer() {
           <FooterLink href="/snippets">Snippets</FooterLink> */}
         </div>
         <div className="flex flex-col space-y-4">
-          <ExternalLink href="https://www.linkedin.com/in/seacaldev/">
+          <FooterExternalLink href="https://www.linkedin.com/in/seacaldev/">
             LinkedIn
-          </ExternalLink>
-          <ExternalLink href="https://github.com/jaggervlad">
+          </FooterExternalLink>
+          <FooterExternalLink href="https://github.com/jaggervlad">
             GitHub
-          </ExternalLink>
-          <ExternalLink href="https://www.instagram.com/seacal_dev/">
+          </FooterExternalLink>
+          <FooterExternalLink href="https://www.instagram.com/seacal_dev/">
             Instagram
-          </ExternalLink>
+          </FooterExternalLink>
         </div>
 
         <div className="flex flex-col space-y-4">

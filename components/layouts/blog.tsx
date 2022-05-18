@@ -11,7 +11,7 @@ export default function BlogContainer({
 }: PropsWithChildren<{ post: Blog }>) {
   return (
     <Container
-      title={`${post.title} – Lee Robinson`}
+      title={`${post.title} – Sebastian Acosta`}
       description={post.summary}
       date={new Date(post.publishedAt).toISOString()}
       type="article"
@@ -23,7 +23,7 @@ export default function BlogContainer({
         <div className="mt-2 flex w-full flex-col items-start justify-between md:flex-row md:items-center">
           <div className="flex items-center">
             <Image
-              alt="Lee Robinson"
+              alt="Sebastian Acosta"
               height={24}
               width={24}
               src="/images/profile.jpeg"

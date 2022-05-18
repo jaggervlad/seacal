@@ -8,14 +8,14 @@ function ProjectCard({ project }: { project: Project }) {
   return (
     <div
       key={title}
-      className="flex flex-col overflow-hidden rounded-lg shadow-lg"
+      className="flex flex-col overflow-hidden rounded-md shadow-md shadow-gray-400 dark:border-slate-700 dark:shadow-slate-800"
     >
-      <div className="flex-shrink-0 p-2">
+      <div className="flex-shrink-0">
         <Image
           width={500}
           height={225}
           layout="responsive"
-          className="rounded-lg object-cover"
+          className="object-cover"
           src={imageUrl}
           alt={title}
         />
@@ -30,14 +30,14 @@ function ProjectCard({ project }: { project: Project }) {
             {description}
           </p>
         </div>
-        <div className="mt-6 flex items-center space-x-8">
+        <div className="mt-6 flex items-center space-x-2">
           <a
             href={codeUrl}
             target="_blank"
             rel="noreferrer"
-            className="flex cursor-pointer items-center text-base font-semibold text-black hover:text-opacity-80 dark:text-slate-200 dark:hover:text-opacity-80"
+            className="flex cursor-pointer items-center rounded-lg bg-black p-2 text-base  font-semibold text-white hover:bg-opacity-90 hover:text-opacity-95 dark:bg-white dark:text-black dark:hover:bg-opacity-90"
           >
-            Ver Codigo
+            Código
             <BsGithub className="ml-2 h-4 w-4" />
           </a>
 
@@ -45,7 +45,7 @@ function ProjectCard({ project }: { project: Project }) {
             href={demoUrl}
             target="_blank"
             rel="noreferrer"
-            className="flex cursor-pointer items-center text-base font-semibold text-black hover:text-opacity-80 dark:border-slate-200 dark:text-slate-200 dark:hover:text-opacity-80"
+            className="flex cursor-pointer items-center rounded-lg bg-cyan-600 p-2 text-base font-semibold text-white hover:bg-opacity-90 dark:bg-cyan-900 dark:hover:bg-opacity-90"
           >
             Demo
             <BiLinkExternal className="ml-2 h-4 w-4" />
