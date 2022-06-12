@@ -7,7 +7,7 @@ const KnowledegCard: React.FC<{
   return (
     <div
       className={`overflow-hidden rounded-md border p-4 shadow-md shadow-gray-400 dark:border-slate-700 dark:shadow-slate-800 ${
-        title === 'Data Base' && 'md:col-span-2 lg:col-span-1'
+        title === 'Data Base' && 'col-span-1'
       }`}
     >
       <div className="mt-2 mb-4 block">

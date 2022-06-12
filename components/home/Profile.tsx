@@ -10,7 +10,11 @@ function Profile() {
         </h2>
         <p className="mb-8 text-slate-600 dark:text-slate-400">
           Enfocado en la innovasión tecnológica, en constante aprendizaje de
-          nuevas tecnologías en desarrollo web para ofrecer el mejor servicio.
+          nuevas tecnologías en desarrollo web para ofrecer el mejor servicio. 3
+          años de experiencia en desarrollo web, capacitado permanentemente en
+          tecnoligías Frontend, Backend, Bases de Datos Relacionales y NO
+          Relacionales, Git para el control de versiones, deploy continuo con
+          Heroku y Vercel , Logging y Testing.
         </p>
       </div>
       {/* <div className="relative mb-8 mr-auto w-[80px] sm:mb-0 sm:w-[176px]">

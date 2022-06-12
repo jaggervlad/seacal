@@ -38,21 +38,21 @@ export const Knowledegs = [
     id: 1,
     title: 'Front End',
     description:
-      'Conocimiento avanzado de Javascript y ReactJS. Conexiones con Servidores. Guias De Estilo, Sistemas de Diseños y Librerias de Componentes:',
+      'Avanzado conocimiento en Javascript y ReactJS. Conexiones con Servidores. Guias De Estilo, Sistemas de Diseños y Librerias de Componentes:',
     skills: FrontendKnowledegs,
   },
   {
     id: 2,
     title: 'Back End',
     description:
-      'Node.js y Typescript para crear servidores con comunicación HTTP, para servir API`s Rest con Express, y Graphql con Apollo Server y GraphqlTools.',
+      'Node.js y Typescript para crear servidores con comunicación HTTP, para Servicios Web REST y Graphql.',
     skills: BackendKnowledegs,
   },
   {
     id: 3,
     title: 'Data Base',
     description:
-      ' Experiencia usando bases de datos Mongo y SQL para la creación, edición y eliminación de información.',
+      'Avanzado conocimiento usando bases de datos Mongo, PostgresSQL y SQL.',
     skills: DBKnowledegs,
   },
 ];

@@ -5,7 +5,7 @@ interface Props {}
 
 const SkillSection: React.FC<Props> = () => {
   return (
-    <div className="mb-12 grid gap-16 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
+    <div className="mb-12 grid gap-16 lg:gap-x-5 lg:gap-y-12">
       {Knowledegs.map(({ id, title, description, skills }) => (
         <KnowledegCard key={id} title={title} description={description}>
           {skills && (
