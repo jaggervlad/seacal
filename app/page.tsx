@@ -8,13 +8,13 @@ import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
-    <main className="w-full bg-gray-950 text-gray-300 px-4">
+    <main className="w-full px-4 text-gray-300 bg-gray-950">
       <div className="max-w-4xl mx-auto lg:pt-10">
         <Banner />
         <Aboutme />
         <Experience />
         <Skills />
-        {/* <Projects /> */}
+        <Projects />
         <Contact />
         <Footer />
       </div>
