@@ -7,9 +7,9 @@ return (
     <div className="max-w-5xl mx-auto flex flex-col gap-4 items-center justify-center">
         <h2 className="text-2xl font-bold">Contáctame</h2>
         <p className="text-lg tracking-wide font-medium text-center">
-            Aunque actualmente no estoy buscando nuevas oportunidades, siempre estoy disponible para recibir mensajes en
-            mi bandeja de entrada. Ya sea que tengas alguna pregunta o simplemente quieras saludar, ¡haré mi mejor
-            esfuerzo para responderte lo antes posible!
+            Siempre estoy interesado en escuchar sobre nuevas oportunidades. Si tienes una oferta interesante o
+            simplemente quieres comunicarte, estaré encantado de recibir tus mensajes en mi bandeja de entrada. ¡No
+            dudes en contactarme y haré mi mejor esfuerzo para responder lo antes posible!
         </p>
         <a href="mailto:seacal.pe@gmail.com">
             <button
