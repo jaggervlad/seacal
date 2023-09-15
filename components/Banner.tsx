@@ -7,7 +7,7 @@ const Banner = () => {
       {/* Image */}
       <div className="bg-black rounded-full w-44 h-44">
         <Image
-          className="w-full h-full rounded-full border-[1px] border-indigo-700 p-2 object-cover"
+          className="w-full h-full rounded-full border-[1px] border-blue-600 p-2 object-cover"
           src={ProfileImg}
           alt="Imagen de Perfil"
         />

@@ -1,15 +1,12 @@
 type Props = {
   title: string;
-  link: string;
 };
 
-const SkillsInput = ({ title, link }: Props) => {
+const SkillsInput = ({ title }: Props) => {
   return (
-    <a href={link} target="_blank">
-      <p className="border border-blue-800 px-6 py-2 text-lg tracking-wide bg-transparent text-gray-400 hover:text-white hover:border-blue-600 hover:bg-black rounded-lg duration-300">
-        {title}
-      </p>
-    </a>
+    <p className="px-6 py-2 text-lg tracking-wide text-gray-400 duration-300 bg-transparent border border-blue-800 rounded-lg hover:text-white hover:border-blue-600 hover:bg-black">
+      {title}
+    </p>
   );
 };
 
