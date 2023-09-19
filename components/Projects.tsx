@@ -12,21 +12,11 @@ const Projects = () => {
     <div className="wrapper" id="proyectos">
       <Title text="Proyectos" icon={<FaProjectDiagram />} />
       <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 place-items-center">
-        <ProjectCard
-          img={autoland.src}
-          title="Autoland React Version"
-          link="https://autoland-migration.vercel.app/"
-        />
+     
         <ProjectCard
           img={saape.src}
           title="Start Up Personal"
           link="https://saa.pe/"
-        />
-        <ProjectCard
-          img={readhub.src}
-          title="App de libros"
-          link="https://saa.pe/"
-          githubUrl="https://github.com/jaggervlad/book-list-test"
         />
         <ProjectCard
           img={readhub.src}
