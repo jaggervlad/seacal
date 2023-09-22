@@ -5,6 +5,7 @@ import { FaProjectDiagram } from 'react-icons/fa';
 import saape from '../public/img/projects/saape.png';
 import readhub from '../public/img/projects/readhub.png';
 import ecommerce from '../public/img/projects/ecommerce.png';
+import usersInterview from '../public/img/projects/users-interview.png';
 
 const Projects = () => {
   return (
@@ -27,6 +28,12 @@ const Projects = () => {
           title="Ecommerce"
           link="https://ecommerce-test-ruddy.vercel.app/"
           githubUrl="https://github.com/jaggervlad/ecommerce-test"
+        />
+        <ProjectCard
+          img={usersInterview.src}
+          title="Usuarios - Prueba técnica"
+          link="https://users-react-interview.vercel.app/"
+          githubUrl="https://github.com/jaggervlad/users-react-interview"
         />
       </div>
     </div>
