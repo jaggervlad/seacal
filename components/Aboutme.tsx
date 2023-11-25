@@ -21,12 +21,6 @@ const Aboutme = () => {
           equipos multidisciplinarios y estoy cómodo asumiendo nuevos desafíos y
           aprendiendo nuevas tecnologías según sea necesario.
         </p>
-        <p>
-          Siempre estoy buscando mejorar mis habilidades y mantenerme
-          actualizado con las mejores prácticas más recientes en el desarrollo
-          web. Estoy emocionado de seguir creciendo como desarrollador y
-          contribuir de manera significativa a proyectos y equipos.
-        </p>
       </div>
     </div>
   );
