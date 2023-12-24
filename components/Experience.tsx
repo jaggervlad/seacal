@@ -9,15 +9,14 @@ const Experience = () => {
       <Title text="Experiencias" icon={<MdWork />} />
       <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
         <ExperienceCard
-          title="velogig.com"
-          subTitle="Web Developer 2022 - Present"
-          icon={<SiReactivex />}
-        />
-
-        <ExperienceCard
           title="Freelancer"
-          subTitle="MERN Stack Developer 2019 - 2022"
+          subTitle="Full Stack Developer 2019 - Present"
           icon={<SiFreelancer />}
+        />
+        <ExperienceCard
+          title="velogig.com"
+          subTitle="Senior Web Dev 2022 - 2023"
+          icon={<SiReactivex />}
         />
       </div>
     </section>

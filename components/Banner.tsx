@@ -3,7 +3,7 @@ import ProfileImg from '../public/img/profile.jpeg';
 
 const Banner = () => {
   return (
-    <div className="flex flex-col items-center gap-10 wrapper md:flex-row">
+    <div className="flex flex-col items-center gap-10 md:items-start wrapper md:flex-row">
       {/* Image */}
       <div className="bg-black rounded-full w-44 h-44">
         <Image
@@ -21,14 +21,17 @@ const Banner = () => {
           Full Stack Developer
         </h3>
         <p className="mb-4 text-base tracking-wide text-center md:text-left">
-          Soy un desarrollador web con más de 4 años de experiencia en React.
-          Tengo una sólida base en el desarrollo de front-end y back-end, y
-          tengo habilidades para crear aplicaciones web receptivas y amigables
-          para el usuario utilizando React y su ecosistema.
+          Con más de 4 años de experiencia, poseo una sólida base en el
+          desarrollo FRONTEND, utilizando tecnologías como Javascript, React,
+          Typescript, CSS, HTML5, Next.js, Astro, Vite, Wordpress, PHP y
+          Shopify. En el BACKEND, cuento con experiencia en Node.js, Typescript,
+          Nest.js, Mongoose, Sequelize, TypeORM, GraphQL y Express. A lo largo
+          de mi trayectoria, he participado en una variada gama de proyectos,
+          destacándome en la construcción y mantenimiento de aplicaciones
         </p>
 
         <a href="/curriculum.pdf" target="_blank" referrerPolicy="no-referrer">
-          <button className="text-xl font-bold text-white duration-300 rounded-lg w-52 h-14 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-950 hover:from-indigo-950 hover:to-blue-600">
+          <button className="text-xl font-bold text-white transition-all duration-300 rounded-lg w-52 h-14 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-950 hover:from-indigo-950 hover:to-blue-600">
             Curriculum
           </button>
         </a>

@@ -12,7 +12,7 @@ const ProjectCard = ({ title, link, img, githubUrl }: Props) => {
   return (
     <div>
       <a href={link} target="_blank">
-        <div className="w-full h-80 border-[1px] border-blue-600 overflow-hidden relative group">
+        <div className="w-full h-80 rounded-lg border-[1px] border-blue-600 overflow-hidden relative group">
           <Image
             className="object-cover transition-transform duration-[3s]"
             width={350}
@@ -31,7 +31,7 @@ const ProjectCard = ({ title, link, img, githubUrl }: Props) => {
           <Link
             href={githubUrl}
             target="_blank"
-            className="flex items-center gap-2 px-4 py-2 text-sm font-bold text-white duration-300 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-950 hover:from-indigo-950 hover:to-blue-600"
+            className="flex items-center gap-2 px-4 py-2 text-sm font-bold text-white duration-300 rounded-lg bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-950 hover:from-indigo-950 hover:to-blue-600"
           >
             CÓDIGO <AiFillGithub className="w-5 h-5" />
           </Link>
@@ -40,7 +40,7 @@ const ProjectCard = ({ title, link, img, githubUrl }: Props) => {
         <Link
           href={link}
           target="_blank"
-          className="flex items-center gap-2 px-4 py-2 text-sm font-bold text-white duration-300 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-950 hover:from-indigo-950 hover:to-blue-600"
+          className="flex items-center gap-2 px-4 py-2 text-sm font-bold text-white duration-300 rounded-lg bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-950 hover:from-indigo-950 hover:to-blue-600"
         >
           DEMO <AiOutlineLink className="w-5 h-5" />
         </Link>

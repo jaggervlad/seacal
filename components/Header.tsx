@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export const Header = () => {
+const Header = () => {
   return (
     <header className="z-10 -scroll-mb-24 items-center py-10  bg-gray-950 border-b-[1px] border-slate-700 flex justify-between">
       <h1 className="text-2xl font-bold text-white sm:text-3xl md:text-4xl lg:text-5xl">
@@ -10,14 +10,16 @@ export const Header = () => {
       <nav>
         <ul className="items-center hidden gap-4 text-lg md:flex">
           <NavItem label="Experiencia" href="/#experiencia" />
-          <NavItem label="Skills" href="/#habilidades" />
           <NavItem label="Proyectos" href="/#proyectos" />
+          <NavItem label="Skills" href="/#habilidades" />
           <NavItem label="Contacto" href="/#contacto" />
         </ul>
       </nav>
     </header>
   );
 };
+
+export default Header;
 
 const NavItem = ({ label, href }: { label: string; href: string }) => {
   return (
