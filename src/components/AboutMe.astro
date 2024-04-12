@@ -1,0 +1,40 @@
+---
+const personalImageAlt = 'Sebastian Acosta';
+---
+
+<article
+  class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
+>
+  <div
+    class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+  >
+    <p>
+      Me llamo Sebastián Acosta, y cuento con más de 4 años de experiencia en el
+      ámbito del desarrollo web. Mi enfoque principal se encuentra en el
+      desarrollo FRONTEND, <strong>
+        donde he trabajado con tecnologías como JavaScript, React, TypeScript,
+        CSS y HTML5. Además, he utilizado frameworks y herramientas como
+        Next.js, Astro y Vite
+      </strong>, así como plataformas como Wordpress, PHP y Shopify para crear
+      soluciones web dinámicas y atractivas.
+    </p>
+
+    <p>
+      En cuanto al desarrollo BACKEND, tengo experiencia sólida en<strong>
+        Node.js, TypeScript, Nest.js, Mongoose, Sequelize, TypeORM, GraphQL y
+        Express.
+      </strong> He participado en una amplia variedad de proyectos, donde he destacado
+      en la construcción y mantenimiento de aplicaciones, asegurando su funcionalidad
+      y escalabilidad.
+    </p>
+  </div>
+
+  <img
+    width="200"
+    height="200"
+    src="/saa.jpg"
+    alt={personalImageAlt}
+    class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
+    style="object-position: 50% 50%"
+  />
+</article>

@@ -1,0 +1,36 @@
+---
+import ExperienceItem from './ExperienceItem.astro';
+const EXPERIENCIE = [
+  {
+    date: 'Actualmente...',
+    title: 'Senior Full Stack',
+    company: 'Sinapsis Agencia Digital',
+    description:
+      'Actualmente trabajo como Full Stack Developer en Sinapsis Agencia Digital, donde desarrollo microservicios en TypeScript, interfaces con Angular y APIs REST con Node.js. También manejo integraciones con APIs externas, bases de datos y la migración de sistemas a la nube AWS. Además, optimizo algoritmos y utilizo metodología SCRUM. Además, brindo soporte en plataformas digitales y gestiono el versionamiento de código con GitHub y Bitbucket.',
+  },
+  {
+    date: 'Enero 2019 - Presente',
+    title: 'Full Stack Developer',
+    company: 'Freelance',
+    description:
+      'Como desarrollador Full-stack freelance, he dedicado los últimos 5 años a la creación y desarrollo de páginas web utilizando una variedad de tecnologías, incluyendo el stack MERN (MongoDB, Express.js, React.js, Node.js), MEAN (MongoDB, Express.js, AngularJS, Node.js) y WordPress.',
+  },
+  {
+    date: 'Oct 2022 - Dec 2023',
+    title: 'Full Stack Developer',
+    company: 'Velogig',
+    description:
+      'En Velogig, me desempeñé como Full Stack Developer, encargado de mantener sitios web en WordPress y desarrollar MVPs con tecnologías como React, TypeScript y Node.js. También manejé la configuración de bases de datos. Trabajé en equipo para entregar proyectos de alta calidad en tiempo.',
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
